@@ -18,7 +18,7 @@ class Authenticator {
             });
     }
 
-    authorize(token) {
+    authenticate(token) {
         return this.tokenGenerator.verify(token);
     }
 }

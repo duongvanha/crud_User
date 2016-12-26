@@ -1,11 +1,5 @@
-/**
- * Created by friendd on 16/12/2016.
- */
 const ObjectID = require('mongodb').ObjectID;
 class User {
-    constructor() {
-    }
-
     markFromMongo(stringId) {
         this._id = new ObjectID(stringId);
         return this;

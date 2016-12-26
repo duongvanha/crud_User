@@ -2,7 +2,7 @@ let jwt = require('jsonwebtoken');
 class TokenGenerator {
     constructor(key) {
         this.key     = key;
-        this.options = {expiresIn: 60 * 60};
+        this.options = {expiresIn: 60 * 60 * 60};
     }
 
     setOptions(options) {

@@ -7,6 +7,7 @@ let authRouter = require('./../http/router/auth');
 let filter     = require('./middleware');
 router.use('/Users', filter.authenticate, userRouter);
 router.use('/Auth', filter.castCredential, authRouter);
+//router.use('/Question',);
 router.use((req, res, next) => {
     const err = new Error('API not found');
     return next(err);
