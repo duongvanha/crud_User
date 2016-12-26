@@ -1,6 +1,3 @@
-/**
- * Created by friendd on 21/12/2016.
- */
 const BcryptHasher    = require('./../app/encryptionService/BcryptHasher');
 const TokenGenerator  = require('./../app/encryptionService/TokenGenerator');
 const Authenticator   = require('./../app/authenService/Authenticator');

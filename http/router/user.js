@@ -1,16 +1,13 @@
-/**
- * Created by friendd on 16/12/2016.
- */
 let router       = require('express').Router();
 const filter     = require('./../middleware');
-const Controller = require('./../controller');
+const controller = require('./../controller');
 router.route('/')
-    .get(Controller.UserController.getAll)
-    .post(filter.castRequireUser, filter.credentialExists, Controller.UserController.addUser);
+    .get(controller.UserController.getAll)
+    .post(filter.castRequireUser, filter.credentialExists, controller.UserController.addUser);
 
 router.route('/:id')
-    .get(filter.filterId, Controller.UserController.getById)
-    .put(filter.filterId, filter.castUser, Controller.UserController.editUser)
-    .delete(filter.filterId, Controller.UserController.removeUser);
+    .get(filter.filterId, controller.UserController.getById)
+    .put(filter.filterId, filter.castUser, controller.UserController.editUser)
+    .delete(filter.filterId, controller.UserController.removeUser);
 
 module.exports = router;

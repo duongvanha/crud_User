@@ -1,6 +1,3 @@
-/**
- * Created by friendd on 19/12/2016.
- */
 let UserRepository       = require('./../app/userService/UserRepository');
 let RegisterService      = require('./../app/registerService/RegisterService');
 let CredentialRepository = require('./../app/credentialService/CredentialRepository');

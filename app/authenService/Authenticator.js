@@ -1,6 +1,3 @@
-/**
- * Created by friendd on 16/12/2016.
- */
 class Authenticator {
     constructor(credentialRepository, hasher, tokenGenerator) {
         this.hasher               = hasher;
@@ -19,6 +16,10 @@ class Authenticator {
                 if (!isLogin) throw new Error("Password not validate");
                 return this.tokenGenerator.generate(credential.toJson())
             });
+    }
+
+    authorize(token) {
+        return this.tokenGenerator.verify(token);
     }
 }
 

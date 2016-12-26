@@ -1,6 +1,3 @@
-/**
- * Created by friendd on 21/12/2016.
- */
 let Credential = require('./../../app/credentialService/Credential');
 module.exports = (req, res, next) => {
     if (!req.body.userName) next(new Error("userName is required"));

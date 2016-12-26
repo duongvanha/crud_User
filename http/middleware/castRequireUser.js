@@ -1,6 +1,3 @@
-/**
- * Created by friendd on 21/12/2016.
- */
 let User       = require('./../../app/userService/User');
 let validator  = require('validator');
 module.exports = (req, res, next) => {

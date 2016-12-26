@@ -1,6 +1,3 @@
-/**
- * Created by friendd on 16/12/2016.
- */
 let jwt = require('jsonwebtoken');
 class TokenGenerator {
     constructor(key) {
@@ -14,6 +11,15 @@ class TokenGenerator {
 
     generate(value) {
         return jwt.sign(value, this.key, this.options);
+    }
+
+    verify(token) {
+        return new Promise((resolve, reject) => {
+            jwt.verify(token, this.key, (err, encode) => {
+                if (err) return reject(err);
+                resolve(encode);
+            })
+        });
     }
 }
 
